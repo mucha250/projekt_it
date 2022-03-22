@@ -28,3 +28,8 @@ Wkrótce
 Wkrótce
 <h2>Schemat bazy danych</h2>
 Wkrótce
+
+<h2>Wykonali</h2>
+v1</br>
+v2</br>
+v3</br>
