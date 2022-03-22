@@ -1,4 +1,4 @@
-<h1>Aplikacja do zarządzania zasobami w Firmie - aplikacja do inwentaryzacji sprzętu </h1>
+<h1>Aplikacja do inwentaryzacji sprzętu </h1>
 
 Jest to projekt przeznaczony do zarządzania zasobami oraz aktywami w dziedzinie IT. 
 
