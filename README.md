@@ -11,7 +11,7 @@ Nasza aplikacja działa na dowolnym systemie Mac OSX, odmianie Linuksa, a także
 
 
 
-Wykorzystywane języki oraz frameworki:
+<h2>Technologie<h2>
 
 - Javascript - > opis..
 - HTML - > opis...
