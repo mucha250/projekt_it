@@ -11,7 +11,7 @@ Nasza aplikacja działa na dowolnym systemie Mac OSX, odmianie Linuksa, a także
 
 
 
-<h2>Technologie<h2>
+<h2>Technologie</h2>
 
 - Javascript - > opis..
 - HTML - > opis...
