@@ -1,5 +1,7 @@
 <h1>Aplikacja do inwentaryzacji sprzętu </h1>
 
+
+Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administratorzy aplikacji będą mogli zarządzać między innymi sprzętem, licencjami czy peryferiami w organizacji. 
 Jest to projekt przeznaczony do zarządzania zasobami oraz aktywami w dziedzinie IT. 
 
 
