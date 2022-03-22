@@ -13,10 +13,10 @@ Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administrato
 - MySQL - > Baza danych przechowująca informacje na temat użytkowników oraz sprzętu
 
 <h2>Funkcjonalności</h2>
-- Logowanie przy użyciu kont z poświadczeniami Administratora oraz Użytkownika,
-- Możliwość dodawania, edycji, usuwania oraz przypisywania danego sprzętu do pracownika,
-- Możliwość pobrania protokołu ze sprzętem jaki posiada dany użytkownik,
-- Podgląd przez innych użytkowników bazy pracowników pracujących w organizacji, 
+- Logowanie przy użyciu kont z poświadczeniami Administratora oraz Użytkownika,</br>
+- Możliwość dodawania, edycji, usuwania oraz przypisywania danego sprzętu do pracownika,</br>
+- Możliwość pobrania protokołu ze sprzętem jaki posiada dany użytkownik,</br>
+- Podgląd przez innych użytkowników bazy pracowników pracujących w organizacji, </br>
 
 <h2>Wymagania</h2>
 Aplikacja działa na dowolnym systemie Mac OSX, odmianach Linuksa, a także na Windowsie. 
