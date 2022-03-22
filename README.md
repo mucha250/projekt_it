@@ -19,6 +19,8 @@ Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administrato
 
 <h2>Wymagania</h2>
 Aplikacja działa na dowolnym systemie Mac OSX, odmianach Linuksa, a także na Windowsie. 
+<h2>Środowisko</h3>
+To jest oprogramowanie internetowe. Oznacza to, że nie ma pliku wykonywalnego (inaczej plików .exe) i musi być uruchamiany na serwerze sieciowym i dostępny za pośrednictwem przeglądarki internetowej.
 
 <h2>Panel logowania </h2>
 Wkrótce
