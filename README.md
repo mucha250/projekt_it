@@ -13,5 +13,6 @@ Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administrato
 - MySQL - > Baza danych przechowująca informacje na temat użytkowników oraz sprzętu
 
 
-
-
+<h2>Strona Główna - Administrator</h2>
+Wkrótce
+<h2>Strona Główna - Administrator</h2>
