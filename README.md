@@ -5,12 +5,11 @@ Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administrato
 
 
 <h2>Technologie</h2>
-
-- Javascript - > opis..
-- HTML - > opis...
-- CSS - >  opis...
-- JAVA - > opis...
-- MySQL - > Baza danych przechowująca informacje na temat użytkowników oraz sprzętu
+- Javascript - > opis..</br>
+- HTML - > opis...</br>
+- CSS - >  opis...</br>
+- JAVA - > opis...</br>
+- MySQL - > Baza danych przechowująca informacje na temat użytkowników oraz sprzętu</br>
 
 <h2>Funkcjonalności</h2>
 - Logowanie przy użyciu kont z poświadczeniami Administratora oraz Użytkownika,</br>
