@@ -14,10 +14,9 @@ Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administrato
 
 <h2>Funkcjonalności</h2>
 - Logowanie przy użyciu kont z poświadczeniami Administratora oraz Użytkownika,
-<h3> Administrator: </h3>
--test
--test
--test
+- Możliwość dodawania, edycji, usuwania oraz przypisywania danego sprzętu do pracownika,
+- Możliwość pobrania protokołu ze sprzętem jaki posiada dany użytkownik,
+- Podgląd przez innych użytkowników bazy pracowników pracujących w organizacji, 
 
 <h2>Wymagania</h2>
 Aplikacja działa na dowolnym systemie Mac OSX, odmianach Linuksa, a także na Windowsie. 
