@@ -1,4 +1,4 @@
-# Aplikacja do zarządzania zasobami w Firmie, aplikacja do inwentaryzacji sprzętu 
+# Aplikacja do zarządzania zasobami w Firmie - aplikacja do inwentaryzacji sprzętu 
 
 Jest to projekt przeznaczony do zarządzania zasobami oraz aktywami w dziedzinie IT. 
 
