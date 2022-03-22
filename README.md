@@ -12,6 +12,8 @@ Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administrato
 - JAVA - > opis...
 - MySQL - > Baza danych przechowująca informacje na temat użytkowników oraz sprzętu
 
+<h2>Wymagania</h2>
+Aplikacja działa na dowolnym systemie Mac OSX, odmianach Linuksa, a także na Windowsie. 
 
 <h2>Panel logowania </h2>
 Wkrótce
