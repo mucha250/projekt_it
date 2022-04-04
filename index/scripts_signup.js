@@ -6,10 +6,20 @@ const email = document.getElementById("email")
 const password = document.getElementById("password")
 const rpassword = document.getElementById("rpassword")
 
+const msg = document.getElementById("msg");
+msg.style.color = "red";
+
 form.addEventListener('submit', e => {
     e.preventDefault();
-    //checkInputs();
-    register();
+    
+    if(checkInputs()){ 
+        msg.innerHTML = "";
+        location.href = "loggedin.html";
+        register();
+    }
+    else{
+        msg.innerHTML = "No field can be empty";
+    }
 })
 
 
@@ -35,6 +45,8 @@ const register = () => {
 
 function checkInputs(){
 
+    let check = 0;
+
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
@@ -42,11 +54,12 @@ function checkInputs(){
 
     // USERNAME ---------------------------------
 
-    if(usernameValue==='' || usernameValue.length < 4){
+    if(usernameValue===''){
         username.style.borderColor = "#D93600";
     }
     else{
         username.style.borderColor = "green";
+        check++;
     }
 
     // EMAIL ---------------------------------
@@ -56,11 +69,12 @@ function checkInputs(){
     }
     else{
         email.style.borderColor = "green";
+        check++;
     }
 
     // PASSWORD ---------------------------------
 
-    if(passwordValue==='' || passwordValue.length < 7){
+    if(passwordValue===''){
 
         password.style.borderColor = "#D93600";
         rpassword.style.borderColor = "#D93600";        
@@ -74,6 +88,13 @@ function checkInputs(){
     else{
         password.style.borderColor = "green";
         rpassword.style.borderColor = "green"
+        check++;
     }
+
+    if(check<3) return false;
+
+    return true;
 }
+
+
 

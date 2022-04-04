@@ -4,6 +4,9 @@ const form = document.getElementById("form")
 const email = document.getElementById("email")
 const password = document.getElementById("password")
 
+const msg = document.getElementById("msg");
+msg.style.color = "red";
+
 form.addEventListener('submit', e => {
     e.preventDefault();
     //checkInputs();
@@ -26,7 +29,8 @@ const login = () => {
 
     if(response.data.message){
         console.log(response.data);
-        console.log("UZYTKOWNIK  NIE ISTNIEJE");
+        msg.style.color = "red";
+        msg.innerHTML = "There is no such user in the database";
     }else {
         location.href = "panel.html";
     }

@@ -102,6 +102,16 @@ label[for=privacy]{
 	box-shadow: 11px 10px 18px -8px rgba(58,157,255,0.33);
 }
 
+.button:hover{
+	-webkit-box-shadow: 11px 10px 18px -8px rgba(43, 124, 206, 0.7);
+	-moz-box-shadow: 11px 10px 18px -8px rgba(43, 124, 206, 0.7);
+	box-shadow: 11px 10px 18px -8px rgba(43, 124, 206, 0.7);
+}
+
+.button:active{
+	background-color: #2984df;
+}
+
 #acc {
 	margin-top: 45px;
 	margin-left: 25%;

@@ -18,7 +18,7 @@ body{
 
 .holder {
 	width: 420px;
-	height: 750px;
+	height: 350px;
 	background: white;
 	position: absolute;
 	top: 50%;
@@ -114,7 +114,7 @@ label[for=privacy]{
 
 #acc {
 	margin-top: 45px;
-	margin-left: 25%;
+	margin-left: 35%;
 	font-size: 9pt;
 	font-weight: 100;
 	display: flex;
@@ -125,9 +125,11 @@ label[for=privacy]{
 	color: #3A9CFF;
 }
 
-small {
-	font-size: 8pt;
-	margin-left: 16%;
+#msg {
+	font-size: 82pt;
+	align-content: center;
+	position: absolute;
+	left: 50%;
 }
 
 
