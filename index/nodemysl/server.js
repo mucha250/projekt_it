@@ -15,7 +15,7 @@ app.use(
 const db = mysql.createConnection({
     user: "root",
     host: "localhost",
-    password: "password",
+    password: "",
     database: "users",
 });
 
@@ -105,6 +105,40 @@ app.post('/login', (req, res) => {
     );
 });
 
-app.listen('3000', () => {
+app.post('/laptopy', (req, res) => {
+
+    const firmaREQ = req.body.firma;
+    const modelREQ = req.body.model;
+    const procesorREQ = req.body.procesor;
+    const ramREQ = req.body.ram;
+
+    
+    console.log(firmaREQ);
+    console.log(modelREQ);
+    console.log(procesorREQ);
+    console.log(ramREQ);
+   
+        if(firmaREQ != ""){
+
+            
+        let fm = {firma: firmaREQ, model: modelREQ, procesor: procesorREQ, ram: ramREQ};
+        let sql = 'INSERT INTO laptopy SET ?';
+        let query = db.query(sql, fm, (err, result) => {
+        if(err) throw err
+        console.log(result);
+        res.send('dodano');
+        });
+        }
+        else{
+            res.send('błąd');
+        }
+    
+
+});
+
+
+
+
+app.listen('8080', () => {
     console.log("running server");
 });
