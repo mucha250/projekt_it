@@ -1,0 +1,104 @@
+<!DOCTYPE html >
+
+<html>
+
+<head>
+
+<title>Strona główna</title>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="pl">
+  <meta name ="description" content="opis zawartosci strony">
+  <meta name="author" content="dane autora">
+
+  <link href="style_laptopy.css" rel="stylesheet" type="text/css">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
+  
+</head>
+
+<body>
+
+
+<div class="container">
+  <div class="holder">
+  <div class="leftholder">
+    <div class="sidenav">
+
+      <a href="#">Strona Główna</a>
+      <button class="dropdown-btn">Sprzęt
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Dodaj</a>
+        <a href="#">Wyświetl</a>
+        <a href="#">Usuń</a>
+      </div>
+      <a href="#services">Użytkownicy</a>
+      <a href="#clients">Test</a>
+      <a href="#contact">Test</a>
+      
+    </div>
+  </div>
+  <div class="rightholder">
+
+    <form class="lp" id="lp">
+
+      
+
+      <!--<img src="star.png"></img><br>-->
+
+      <!--<label>Wybierz z listy:</label>
+<select type="text">
+  <option value="1">Laptopy</option>
+  <option value="2">Telefony</option>
+  <option value="3">Monitory</option>
+  <option value="4">Aparaty</option>
+  <option value="5">Modemy</option>
+  <option value="6">Peryferia</option>
+  <option value="7">Licencje</option>
+  <option value="8">Drukarki</option>
+</select> -->
+     
+      <label for="firma">Firma:</label><br>
+      <input type="text" id="firma" name="firma"><br>
+
+
+      <label for="model">Model:</label><br>
+      <input type="text" id="model" name="model"><br>
+
+
+      <label for="procesor">Procesor:</label><br>
+      <input type="text" id="procesor" name="procesor"><br>
+
+
+      <label for="ram">RAM:</label><br>
+      <input type="text" id="ram" name="ram"><br>
+
+      <button class="button">Dodaj</button><br>
+
+      <small id="msg"></nr></small><br>
+      
+      
+
+    </form>
+
+  </div>
+</div>
+
+  <div class="down"></div>
+
+  
+  
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="scripts_laptopy.js" type="module"></script>
+
+</body>
+
+</html>
