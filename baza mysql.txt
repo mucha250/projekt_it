@@ -1,0 +1,228 @@
+
+create table users(
+id int primary key AUTO_INCREMENT,
+username varchar(30) not null UNIQUE,
+email varchar(30) not null UNIQUE,
+password varchar(30) not null,
+rights varchar(30) not null
+);
+
+create table producent(
+id int primary key,
+nazwa varchar(20) not null
+);
+
+create table kategoria(
+id int primary key,
+nazwa varchar(20) not null,
+id_producenta int,
+foreign key (id_producenta) references producent(id)
+);
+
+create table sprzet(
+id int primary key,
+model varchar(40) not null,
+nr_seryjny varchar(15) not null,
+stan_sprzetu varchar(200),
+id_users int,
+id_kategoria int,
+foreign key (id_users)references users(id),
+foreign key (id_kategoria)references kategoria(id)
+);
+
+create table laptopy(
+id int primary key,
+nazwa_w_domenie varchar(15) not null unique,
+typ_ram varchar(5) not null,
+rozmiar_ram varchar(4) not null,
+typ_dysku varchar(4) not null,
+rozmiar_dysku varchar(10) not null,
+naped varchar(4) not null,
+ethernet varchar(4) not null,
+ilosc_usb int not null,
+id_sprzet int,
+foreign key (id_sprzet) references sprzet(id)
+);
+
+create table telefony(
+id int primary key,
+imei bigint not null unique,
+rozmiar_ram varchar(4) not null,
+pamiec_wewnetrzna varchar(10) not null,
+rozmiar varchar(10) not null,
+rozmiar_mpx_tyl int not null,
+id_sprzet int,
+foreign key (id_sprzet) references sprzet(id)
+);
+
+create table procesory(
+id int primary key,
+nazwa varchar(30) not null,
+generacja varchar(30) not null,
+model varchar(30) not null,
+czestotliwosc varchar(10) not null,
+liczba_rdzeni int not null,
+id_laptopy int,
+id_telefony int,
+foreign key (id_laptopy) references laptopy(id),
+foreign key (id_telefony) references telefony(id)
+);
+
+create table monitory(
+id int primary key,
+rozmiar varchar(10) not null,
+rodzielczosc varchar(12) not null,
+zlacza varchar(30) not null,
+typ_matrycy varchar(30) not null,
+id_sprzet int,
+foreign key (id_sprzet) references sprzet(id)
+);
+
+create table aparaty(
+id int primary key,
+typ varchar(20) not null,
+obiektyw varchar(20) not null,
+pamiec varchar(10) not null,
+id_sprzet int,
+foreign key (id_sprzet) references sprzet(id)
+);
+
+create table modemy(
+id int primary key,
+typ_modemu varchar(20) not null,
+imei bigint not null unique,
+login varchar(25) not null,
+haslo varchar(30) not null,
+id_sprzet int,
+foreign key (id_sprzet) references sprzet(id)
+);
+
+create table peryferia(
+id int primary key,
+typ_peryferii varchar(30) not null,
+nazwa varchar(30) not null,
+id_sprzet int,
+foreign key (id_sprzet) references sprzet(id)
+);
+
+create table licencje(
+id int primary key,
+nazwa varchar(30) not null,
+klucz_produktu varchar(50) not null,
+id_sprzet int,
+foreign key (id_sprzet) references sprzet(id)
+);
+
+create table drukarki(
+id int primary key,
+nazwa varchar(30) not null,
+typ varchar(20) not null,
+imei bigint not null unique,
+mac varchar(14) not null unique,
+ip varchar(20) not null,
+login varchar(25) not null,
+haslo varchar(30) not null,
+id_sprzet int,
+foreign key (id_sprzet) references sprzet(id)
+);
+
+create table tonery(
+id int primary key,
+typ varchar(20) not null,
+kolor varchar(20) not null,
+nazwa varchar(20) not null,
+id_drukarki int,
+foreign key (id_drukarki) references drukarki(id)
+);
+
+insert into users(id,username,email,password,rights)values ('','moderator','mod@gmail.eu','qwerty','moderator');
+insert into users(id,username,email,password,rights)values ('','admin','admin@gmail.eu','qwerty','admin');
+insert into users(id,username,email,password,rights)values ('','user1','user1@gmail.eu','qwerty','user');
+insert into users(id,username,email,password,rights)values ('','user2','user2@gmail.eu','qwerty','user');
+insert into users(id,username,email,password,rights)values ('','user3','user3@gmail.eu','qwerty','user');
+insert into users(id,username,email,password,rights)values ('','user4','user4@gmail.eu','qwerty','user');
+
+insert into producent(id,nazwa) values (1,'intel');
+insert into producent(id,nazwa) values (2,'asus');
+insert into producent(id,nazwa) values (3,'hp');
+insert into producent(id,nazwa) values (4,'ibm');
+insert into producent(id,nazwa) values (5,'samsung');
+insert into producent(id,nazwa) values (6,'cisco');
+
+insert into kategoria(id,nazwa,id_producenta) values (1,'laptopy',2);
+insert into kategoria(id,nazwa,id_producenta) values (2,'telefony',5);
+insert into kategoria(id,nazwa,id_producenta) values (3,'monitory',3);
+insert into kategoria(id,nazwa,id_producenta) values (4,'aparaty',5);
+insert into kategoria(id,nazwa,id_producenta) values (5,'modemy',6);
+insert into kategoria(id,nazwa,id_producenta) values (6,'peryferia',2);
+insert into kategoria(id,nazwa,id_producenta) values (7,'licencje',4);
+insert into kategoria(id,nazwa,id_producenta) values (8,'drukarki',3);
+
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (1,'Zenbook300','643366','dobry',4,1);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (2,'VivoBook2','764467','dobry',3,1);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (3,'Zenbook200','886466','uszkodzony_ekran',4,1);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (4,'s21fe','8675','dobry',4,2);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (5,'a20','7557','dobry',1,2);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (6,'a20e','4578','nowy',5,2);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (7,'ProMp21','755E','dobry',6,3);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (8,'s24f35','4355555','dobry',2,3);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (9,'s24f50','534E','uszkodzony',1,3);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (10,'nikon_b500','423-432-646','dobry',3,4);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (11,'az1000','544-777-742','nowy',4,4);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (12,'ricoh_60','345-223-45E','nowy',6,4);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (13,'NighthawkM1','4664','dobry',5,5);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (14,'NighthawkM3','9779','nowy',4,5);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (15,'dwr933','9330','uszkodzony',3,5);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (16,'keymaster300','1220','dobry',2,6);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (17,'GM905','0056','zniszczony',1,6);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (18,'scannerl80','9983','nowy',5,6);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (19,'gnu','G554','dobry',4,7);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (20,'oem','G563','nowy',6,7);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (21,'oem','G200','uszkodzony',3,7);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (22,'hp_des430a','44566J','dobry',2,8);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (23,'hp_des330','34664H','nowy',2,8);
+insert into sprzet(id,model,nr_seryjny,stan_sprzetu,id_users,id_kategoria)values (24,'hp_despro770','6474GH','nowy',1,8);
+
+
+insert into laptopy(id,nazwa_w_domenie,typ_ram,rozmiar_ram,typ_dysku,rozmiar_dysku,naped,ethernet,ilosc_usb,id_sprzet) values (1,'lap1','DDR4',8,'ssd',256,'cd','tak', 3, 1);
+insert into laptopy(id,nazwa_w_domenie,typ_ram,rozmiar_ram,typ_dysku,rozmiar_dysku,naped,ethernet,ilosc_usb,id_sprzet) values (2,'lap2','DDR3',8,'hdd',1024,'cd','tak', 3, 2);
+insert into laptopy(id,nazwa_w_domenie,typ_ram,rozmiar_ram,typ_dysku,rozmiar_dysku,naped,ethernet,ilosc_usb,id_sprzet) values (3,'lap3','DDR4',16,'ssd',256,'cd','tak', 4, 3);
+
+insert into telefony(id,imei,rozmiar_ram,pamiec_wewnetrzna,rozmiar,rozmiar_mpx_tyl,id_sprzet) values (1, 273738495939373, 4, 2, 2, 12, 4);
+insert into telefony(id,imei,rozmiar_ram,pamiec_wewnetrzna,rozmiar,rozmiar_mpx_tyl,id_sprzet) values (2, 775337553355775, 4, 2, 4, 10, 5);
+insert into telefony(id,imei,rozmiar_ram,pamiec_wewnetrzna,rozmiar,rozmiar_mpx_tyl,id_sprzet) values (3, 466334433774447, 4, 4, 2, 10, 6);
+
+insert into procesory(id,nazwa,generacja,model,czestotliwosc,liczba_rdzeni,id_laptopy,id_telefony) values (1,'Intel_Core1',12,'i5-12400F', 4.3, 6, 1,NULL);
+insert into procesory(id,nazwa,generacja,model,czestotliwosc,liczba_rdzeni,id_laptopy,id_telefony) values (2,'Intel_Core2',10,'i5-10400F', 4.7, 6, 2,NULL);
+insert into procesory(id,nazwa,generacja,model,czestotliwosc,liczba_rdzeni,id_laptopy,id_telefony) values (3,'AMD1',10,'75800X', 4.3, 6, 3,NULL);
+insert into procesory(id,nazwa,generacja,model,czestotliwosc,liczba_rdzeni,id_laptopy,id_telefony) values (4,'Exynos',10,'75800X', 2.2, 4,NULL, 1);
+insert into procesory(id,nazwa,generacja,model,czestotliwosc,liczba_rdzeni,id_laptopy,id_telefony) values (5,'ExynosX',11,'74400X', 2.3, 2,NULL, 2);
+insert into procesory(id,nazwa,generacja,model,czestotliwosc,liczba_rdzeni,id_laptopy,id_telefony) values (6,'Exynos2',8,'2200', 2.2, 2,NULL, 3);
+
+insert into monitory(id,rozmiar ,rodzielczosc ,zlacza ,typ_matrycy ,id_sprzet) values (1, 24, '1920x1080', 'hdmi', 'ips', 7);
+insert into monitory(id,rozmiar ,rodzielczosc ,zlacza ,typ_matrycy ,id_sprzet) values (2, 22, '1680×1050', 'dvi', 'tn', 8);
+insert into monitory(id,rozmiar ,rodzielczosc ,zlacza ,typ_matrycy ,id_sprzet) values (3, 25, '1920x1200', 'hdmi', 'ips', 9);
+
+insert into aparaty(id,typ,obiektyw,pamiec,id_sprzet) values (1, 'cyfrowy', 'teleobiektyw', 16, 10);
+insert into aparaty(id,typ,obiektyw,pamiec,id_sprzet) values (2, 'cyfrowy', 'teleobiektyw', 32, 11);
+insert into aparaty(id,typ,obiektyw,pamiec,id_sprzet) values (3, 'kompaktowy', 'standardowy', 32, 12);
+
+insert into modemy(id,typ_modemu,imei,login,haslo,id_sprzet) values (1,'kablowy',384929220944839,'mod1','wawa$123',13);
+insert into modemy(id,typ_modemu,imei,login,haslo,id_sprzet) values (2,'kablowy',754754757547745,'mod2','qwerty$123',14);
+insert into modemy(id,typ_modemu,imei,login,haslo,id_sprzet) values (3,'kablowy',856865856865866,'centr','enigm$123',15);
+
+insert into peryferia(id,typ_peryferii,nazwa,id_sprzet) values (1,'klawiatura','klaw1',16);
+insert into peryferia(id,typ_peryferii,nazwa,id_sprzet) values (2,'mysz','mysz1',17);
+insert into peryferia(id,typ_peryferii,nazwa,id_sprzet) values (3,'skaner','skaner_biuro',18);
+
+insert into licencje(id,nazwa,klucz_produktu ,id_sprzet) values (1,'open_office','4353-5533-0941-2263',19);
+insert into licencje(id,nazwa,klucz_produktu ,id_sprzet) values (2,'adobe','6533-5677-8335-7347',20);
+insert into licencje(id,nazwa,klucz_produktu ,id_sprzet) values (3,'coreldraw','0000-2300-4894-9544',21);
+
+insert into drukarki(id,nazwa,typ,imei,mac,ip,login,haslo,id_sprzet) values (1,'deskjet430a','atramentowa',947449323309098,'000AE63EFDE1','192.168.64.67','druk1','qwerty$X',22);
+insert into drukarki(id,nazwa,typ,imei,mac,ip,login,haslo,id_sprzet) values (2,'deskjet330','atramentowa',756857458484848,'88DD44HJ43J4','192.168.64.68','druk2','awsd$X',23);
+insert into drukarki(id,nazwa,typ,imei,mac,ip,login,haslo,id_sprzet) values (3,'deskjetpro770','atramentowa',967849340958595,'0944H5H422K9','192.168.40.55','druk3','zxcvbn$X',24);
+
+insert into tonery(id,typ,kolor,nazwa,id_drukarki) values (1,'pigmentowy','czarny','toner1',1);
+insert into tonery(id,typ,kolor,nazwa,id_drukarki) values (2,'pigmentowy','czarny','toner1',2);
+insert into tonery(id,typ,kolor,nazwa,id_drukarki) values (3,'barwnikowy','kolorowy','toner1',3);
