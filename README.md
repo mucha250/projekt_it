@@ -4,16 +4,16 @@
 Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administratorzy aplikacji będą mogli zarządzać między innymi sprzętem, licencjami czy peryferiami w organizacji.
 
 <h2>Instalacja</h2>
--
--
--
--
+-</br>
+-</br>
+-</br>
+-</br>
 
 <h3>Uruchomienie</h2>
--
--
--
--
+-</br>
+-</br>
+-</br>
+-</br>
 
 <h2>Technologie</h2>
 - Javascript - > opis..</br>
