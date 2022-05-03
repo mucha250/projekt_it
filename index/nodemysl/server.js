@@ -170,7 +170,7 @@ app.post('/w', (req, res) => {
 });
 
 app.get('/getitem', (req, res)=> {
- let sql = 'SELECT * from laptopy'
+ let sql = 'SELECT * from laptopy where id = 1'
  let query = db.query(sql, (err,results) => {
      if(err)
      {
@@ -180,6 +180,19 @@ app.get('/getitem', (req, res)=> {
      res.send(results);
  })   
 })
+
+app.get('/getuser', (req, res)=> {
+    let sql = 'SELECT * from pracownicy'
+    let query = db.query(sql, (err,results) => {
+        if(err)
+        {
+            throw err
+        }
+        console.log(results)
+        res.send(results);
+    })   
+   })
+   
 
 
 app.listen('8081', () => {
