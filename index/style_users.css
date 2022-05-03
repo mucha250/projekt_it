@@ -17,7 +17,7 @@ body{
 }
 .holder
 {
-	width: 95%;
+	width: 96%;
 	height: 750px;
 	background: white;
 	position: absolute;
@@ -30,21 +30,7 @@ body{
 	box-shadow: 7px 9px 43px -16px rgba(0,0,0,0.45);
 	border-top: 5px #3A9CFF solid;	
 }
-.rightholder {
-	width: 72%;
-	height: 750px;
-	position: absolute;
-	left: 26%;
-	
-}
-.leftholder 
-{
-	width: 24%;
-	height: 750px;
-	position: absolute;
-	left: 2%;
-	
-}
+
 
 img {
 	display: flex;
@@ -96,35 +82,6 @@ label[for=privacy]{
 	margin-left: 24%;
 	margin-top: -17px;
 	position: absolute;
-}
-
-.button {
-	
-	margin: 25px auto;
-	margin-left:71%;
-	width: 15%;
-	height: 42px;
-	border-radius: 30px;
-	background-color: #3A9CFF;
-	border: none;
-	color: white;
-	text-align: center;
-	font-size: 14pt;
-	font-weight: 500;
-
-	-webkit-box-shadow: 11px 10px 18px -8px rgba(58,157,255,0.33);
-	-moz-box-shadow: 11px 10px 18px -8px rgba(58,157,255,0.33);
-	box-shadow: 11px 10px 18px -8px rgba(58,157,255,0.33);
-}
-
-.button:hover{
-	-webkit-box-shadow: 11px 10px 18px -8px rgba(43, 124, 206, 0.7);
-	-moz-box-shadow: 11px 10px 18px -8px rgba(43, 124, 206, 0.7);
-	box-shadow: 11px 10px 18px -8px rgba(43, 124, 206, 0.7);
-}
-
-.button:active{
-	background-color: #2984df;
 }
 
 #acc {
@@ -200,6 +157,59 @@ small {
   .fa-caret-down {
 	float: right;
 	padding-right: 8px;
+  }
+  #customers {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 95%;
+	margin: auto;
+	margin-top: 1%;
+  }
+  
+  #customers td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #3A9CFF;
+	color: white;
+  }
+
+  .button {
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+  }
+  
+
+  
+  .button2 {
+	background-color: white; 
+	color: #3A9CFF; 
+	border: 2px solid #3A9CFF;
+	float: right;
+    margin-top: 1%;
+    margin-right: 2%;
+  }
+  
+  .button2:hover {
+	background-color: #3A9CFF;
+	color: white;
   }
 
 

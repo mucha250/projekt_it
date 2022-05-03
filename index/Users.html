@@ -1,50 +1,40 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 
 <html>
+  <head>
+    <title>Strona główna</title>
 
-<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="pl" />
+    <meta name="description" content="opis zawartosci strony" />
+    <meta name="author" content="dane autora" />
 
-<title>Strona główna</title>
+    <link href="style_users.css" rel="stylesheet" type="text/css" />
 
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta http-equiv="content-language" content="pl">
-  <meta name ="description" content="opis zawartosci strony">
-  <meta name="author" content="dane autora">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link href="style_users.css" rel="stylesheet" type="text/css">
+  <body>
+    <div class="container">
+      <div class="holder">
+        <div id="app"></div>
+      </div>
 
+      <div class="down">
+        <a href="signin.html"
+          ><button class="button button2">Wyloguj</button></a
+        >
+        <a href="signin.html"
+          ><button class="button button2">Pracownicy</button></a
+        >
+      </div>
+    </div>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-
-  
-</head>
-
-<body>
-
-
-<div class="container">
-  <div class="holder">
-  <div class="leftholder">
-    
-  </div>
-  <div class="rightholder">
-    <div id="app"></div>
-
-
-  </div>
-</div>
-
-  <div class="down"></div>
-
-  
-  
-</div>
-
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="scripts_users.js" type="module"></script>
-
-</body>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts_users.js" type="module"></script>
+  </body>
 </html>
