@@ -1,13 +1,15 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
+const req = require("express/lib/request");
+const res = require("express/lib/response");
 
 const app = express();
 
 app.use(
-    cors({
-        origin: "*",
-    })
+    cors()//{
+        //origin: "*",
+    //})
 )
 
 //app.use(express());
@@ -136,9 +138,51 @@ app.post('/laptopy', (req, res) => {
 
 });
 
+app.post('/w', (req, res) => {
 
+    const firmaREQ = req.body.firma;
+    const modelREQ = req.body.model;
+    const procesorREQ = req.body.procesor;
+    const ramREQ = req.body.ram;
 
+    
+    console.log(firmaREQ);
+    console.log(modelREQ);
+    console.log(procesorREQ);
+    console.log(ramREQ);
+   
+        if(firmaREQ != ""){
 
-app.listen('8080', () => {
-    console.log("running server");
+            
+        let fm = {firma: firmaREQ, model: modelREQ, procesor: procesorREQ, ram: ramREQ};
+        let sql = 'INSERT INTO laptopy SET ?';
+        let query = db.query(sql, fm, (err, result) => {
+        if(err) throw err
+        console.log(result);
+        res.send('dodano');
+        });
+        }
+        else{
+            res.send('błąd');
+        }
+    
+
 });
+
+app.get('/getitem', (req, res)=> {
+ let sql = 'SELECT * from laptopy'
+ let query = db.query(sql, (err,results) => {
+     if(err)
+     {
+         throw err
+     }
+     console.log(results)
+     res.send(results);
+ })   
+})
+
+
+app.listen('8081', () => {
+    console.log("running server server");
+});
+
