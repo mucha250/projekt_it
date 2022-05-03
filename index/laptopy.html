@@ -16,8 +16,6 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-
   
 </head>
 
@@ -48,22 +46,22 @@
 
     <form class="lp" id="lp">
 
-      
+      <img src="star.png"></img><br>
 
-      <!--<img src="star.png"></img><br>-->
-
-      <!--<label>Wybierz z listy:</label>
-<select type="text">
-  <option value="1">Laptopy</option>
-  <option value="2">Telefony</option>
-  <option value="3">Monitory</option>
-  <option value="4">Aparaty</option>
-  <option value="5">Modemy</option>
-  <option value="6">Peryferia</option>
-  <option value="7">Licencje</option>
-  <option value="8">Drukarki</option>
-</select> -->
-     
+      <label for="select">Wybierz z listy:</label>
+      <select id="select" onchange="formFunction()">
+        <option value=""></option>
+        <option value="laptopy">Laptopy</option>
+        <option value="telefony">Telefony</option>
+        <option value="monitory">Monitory</option>
+        <option value="aparaty">Aparaty</option>
+        <option value="modemy">Modemy</option>
+        <option value="peryferia">Peryferia</option>
+        <option value="licencje">Licencje</option>
+        <option value="drukarki">Drukarki</option>
+      </select>
+      <div id="div1"></div>
+    
       <label for="firma">Firma:</label><br>
       <input type="text" id="firma" name="firma"><br>
 
@@ -80,11 +78,7 @@
       <input type="text" id="ram" name="ram"><br>
 
       <button class="button">Dodaj</button><br>
-
       <small id="msg"></nr></small><br>
-      
-      
-
     </form>
 
   </div>
@@ -92,13 +86,67 @@
 
   <div class="down"></div>
 
-  
-  
 </div>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="scripts_laptopy.js" type="module"></script>
+<!--
+<script>
+function formFunction() {
+  const currentDiv = document.getElementById('div1');
+  const selectValue = document.getElementById('select').value;
+  currentDiv.innerHTML = '';
+ 
+  if (! selectValue) return;
+ 
+  let elements = [];
+ 
+  switch (selectValue) {              //kategoria > firma !?!?!?!?
+    case 'laptopy':
+      elements = ['id_pracownika', 'model', 'nr_seryjny', 'stan_sprzetu', 'id_kategorii_sprzetu', 'nazwa_w_domenie', 'typ_ram', 'rozmiar_ram', 'typ_dysku', 'rozmiar_dysku', 'naped', 'ethernet', 'ilosc_usb','id_procesora','id_sprzetu'];
+      break;
+    case 'telefony':
+      elements = ['id_pracownika', 'model', 'nr_seryjny', 'stan_sprzetu', 'id_kategorii_sprzetu', 'imei', 'rozmiar_ram', 'pamiec_wewnetrzna', 'rozmiar_pamieci', 'rozmiar mpx tyl','id_procesora','id_sprzetu'];
+      break;
+    case 'monitory':
+      elements = ['id_pracownika', 'model', 'nr_seryjny', 'stan_sprzetu', 'id_kategorii_sprzetu', 'rozmiar', 'rodzielczosc', 'zlacza', 'typ_matrycy','id_sprzetu'];
+      break;
+    case 'aparaty':
+      elements = ['id_pracownika', 'model', 'nr_seryjny', 'stan_sprzetu', 'id_kategorii_sprzetu', 'typ', 'obiektyw', 'pamiec', 'typ_matrycy','id_sprzetu'];
+      break;
+    case 'modemy':
+      elements = ['id_pracownika', 'model', 'nr_seryjny', 'stan_sprzetu', 'id_kategorii_sprzetu', 'typ_modemu', 'imei', 'login', 'haslo','id_sprzetu'];
+      break;
+    case 'peryferia':
+      elements = ['id_pracownika', 'model', 'nr_seryjny', 'stan_sprzetu', 'id_kategorii_sprzetu', 'typ_peryferii', 'nazwa','id_sprzetu'];
+      break;
+    case 'licencje':
+      elements = [ 'id','nazwa', 'klucz_produktu','id_sprzetu'];
+      break;
+    case 'drukarki':
+      elements = ['id_pracownika', 'model', 'nr_seryjny', 'stan_sprzetu', 'id_kategorii_sprzetu', 'nazwa', 'typ', 'imei', 'mac', 'ip','login','haslo','id_sprzetu'];
+      break;
+  }
+ 
+  if (elements.length) {
+    let formHTML = '';
+    for (const element of elements) {
+      const field = `
+        <div class="field">
+          <label for="${element}">${element}: </label>
+          <input type="text" "id="${element}" name="${element}" />
+        </div>
+      `;
+      formHTML += field; 
+    }
+    currentDiv.innerHTML = formHTML;
+  }
+ 
+}
 
+  
+
+</script>-->
 </body>
 
 </html>
