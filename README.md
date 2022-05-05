@@ -10,9 +10,11 @@ Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administrato
 -</br>
 
 <h3>Uruchomienie</h2>
--</br>
--</br>
--</br>
+- Uruchamiamy aplikację Xampp, następnie uruchamiamy Appache oraz MySQL. </br>
+- Uruchamiamy CMD jako administrator i przechodzimy do katalogu z naszym plikiem serwerowym.</br>
+ W konsoli wpisujemy komendę npm start, następnie czekamy aż uruchomi się serwer, nie wyłączamy CMD. </br>
+- Uruchamiamy drugie okno CMD, następnie przechodzimy do folderu głównego z aplikacją i wpisujemy </br>
+http-server -c-1 aby uruchomić serwer http.
 
 -</br>
 
@@ -20,7 +22,6 @@ Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administrato
 - Javascript - > opis..</br>
 - HTML - > opis...</br>
 - CSS - >  opis...</br>
-- JAVA - > opis...</br>
 - MySQL - > Baza danych przechowująca informacje na temat użytkowników oraz sprzętu</br>
 
 <h2>Funkcjonalności</h2>
