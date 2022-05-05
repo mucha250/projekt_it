@@ -227,4 +227,4 @@ const pracownicyCsv = async () => {
       return response;
     });
 };
-pracownicyCsv();
+

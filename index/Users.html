@@ -19,21 +19,37 @@
   </head>
 
   <body>
+    
+  
+    
+    
     <div class="container">
       <div class="holder">
-        <div id="app"></div>
+        
+        <div id="app">
+          
+        </div>
       </div>
 
       <div class="down">
-        <a href="signin.html"
-          ><button class="button button2">Wyloguj</button></a
-        >
-        <a href="signin.html"
-          ><button class="button button2">Pracownicy</button></a
-        >
+        <img src="star.png"></img>
+        <a href="signin.html"><button class="button button2">Wyloguj</button></a>
+        <button onclick="pracownicyCsv()" class="button button2">Pracownicy</button>
+
+        
       </div>
     </div>
 
+    <script>
+      const pracownicyCsv = async () => {
+  return await axios
+    .get("http://localhost:8081/getPracownicyCsv")
+    .then((response) => {
+      console.log(response);
+      return response;
+    });
+};
+    </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="scripts_users.js" type="module"></script>
   </body>
