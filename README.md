@@ -12,7 +12,7 @@ Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administrato
 <h3>Uruchomienie</h2>
 -</br>
 -</br>
--</br>![image](https://user-images.githubusercontent.com/101140200/167018348-5a11cd7b-6485-4875-b3df-707bff05eec7.png)
+-</br>
 
 -</br>
 
