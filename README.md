@@ -19,7 +19,7 @@ http-server -c-1 aby uruchomić serwer http.
 -</br>
 
 <h2>Technologie</h2>
-- Javascript - > opis..</br>
+- Javascript - > Obsługa Backendu oraz Frontendu</br>
 - HTML - > opis...</br>
 - CSS - >  opis...</br>
 - MySQL - > Baza danych przechowująca informacje na temat użytkowników oraz sprzętu</br>
