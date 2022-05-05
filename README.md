@@ -44,6 +44,6 @@ Wkrótce
 <img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/model_bazy.png">
 
 <h2>Wykonali</h2>
-v1</br>
-v2</br>
-v3</br>
+P.M.</br>
+M.M.</br>
+K.R.</br>
