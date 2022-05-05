@@ -5,7 +5,7 @@ const req = require("express/lib/request");
 const res = require("express/lib/response");
 const createCsvWriter = require("csv-writer").createObjectCsvWriter;
 const csvWriter = createCsvWriter({
-  path: "pracownicy.csv",
+  path: "C:/Users/korda/Desktop/pracownicy.csv",
   header: [
     { id: "id", title: "Imie" },
     { id: "username", title: "Nazwisko" },
