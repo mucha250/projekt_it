@@ -35,7 +35,7 @@ Aplikacja działa na dowolnym systemie Mac OSX, odmianach Linuksa, a także na W
 Jest to oprogramowanie internetowe. Oznacza to, że nie ma pliku wykonywalnego (inaczej plików .exe) i musi być uruchamiany na serwerze sieciowym i jest dostępny za pośrednictwem przeglądarki internetowej.
 
 <h2>Panel logowania </h2>
-![alt text](https://raw.githubusercontent.com/mucha250/projekt_it/main/index/Sign%20In.png)
+<img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/Sign%20In.png">
 <h2>Strona Główna - Administrator</h2>
 Wkrótce
 <h2>Strona Główna - Użytkownik</h2>
@@ -44,6 +44,6 @@ Wkrótce
 Wkrótce
 
 <h2>Wykonali</h2>
-P.M.</br>
-M.M</br>
-K.R</br>
+v1</br>
+v2</br>
+v3</br>
