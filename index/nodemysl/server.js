@@ -41,28 +41,6 @@ db.connect((err) => {
 
 app.use(express.json());
 
-// Create DB
-
-// app.get('/createdb', (req, res) => {
-//     let sql = 'CREATE DATABASE nodemysql';
-//     db.query(sql, (err,result) => {
-//         if(err) {
-//             console.log("Err");
-//             throw err;
-//         }
-//         console.log(result);
-//         res.send('Database created...');
-//     });
-// })
-
-// app.get('/createpoststable', (req, res) => {
-//     let sql = 'CREATE TABLE posts(id int AUTO_INCREMENT, title VARCHAR(255), body VARCHAR(255), PRIMARY KEY(id))';
-//     db.query(sql, (err, result) => {
-//         if(err) throw err
-//         console.log(result);
-//         res.send('Posts table created...');
-//     });
-// });
 
 app.post("/register", (req, res) => {
   const usernameREQ = req.body.username;
@@ -175,8 +153,98 @@ app.post("/w", (req, res) => {
   }
 });
 
-app.get("/getitem", (req, res) => {
-  let sql = "SELECT * from laptopy where id = 1";
+app.get("/getlaptop", (req, res) => {
+  let sql = "SELECT * from laptopy;";
+  let query = db.query(sql, (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log(results);
+    res.send(results);
+  });
+});
+
+
+// wyswietlanie
+app.get("/getapar", (req, res) => {
+  let sql = "SELECT * from aparaty;";
+  let query = db.query(sql, (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log(results);
+    res.send(results);
+  });
+});
+
+app.get("/getdruk", (req, res) => {
+  let sql = "SELECT * from drukarki;";
+  let query = db.query(sql, (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log(results);
+    res.send(results);
+  });
+});
+
+app.get("/getlapt", (req, res) => {
+  let sql = "SELECT * from laptopy;";
+  let query = db.query(sql, (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log(results);
+    res.send(results);
+  });
+});
+
+app.get("/getlic", (req, res) => {
+  let sql = "SELECT * from licencje;";
+  let query = db.query(sql, (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log(results);
+    res.send(results);
+  });
+});
+
+app.get("/getmod", (req, res) => {
+  let sql = "SELECT * from modemy;";
+  let query = db.query(sql, (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log(results);
+    res.send(results);
+  });
+});
+
+app.get("/getmon", (req, res) => {
+  let sql = "SELECT * from monitory;";
+  let query = db.query(sql, (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log(results);
+    res.send(results);
+  });
+});
+
+app.get("/getper", (req, res) => {
+  let sql = "SELECT * from peryferia;";
+  let query = db.query(sql, (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log(results);
+    res.send(results);
+  });
+});
+
+app.get("/getproc", (req, res) => {
+  let sql = "SELECT * from procesory;";
   let query = db.query(sql, (err, results) => {
     if (err) {
       throw err;
@@ -187,7 +255,7 @@ app.get("/getitem", (req, res) => {
 });
 
 app.get("/gettel", (req, res) => {
-  let sql = "SELECT * from telefony where id = 1";
+  let sql = "SELECT * from telefony;";
   let query = db.query(sql, (err, results) => {
     if (err) {
       throw err;
@@ -197,8 +265,21 @@ app.get("/gettel", (req, res) => {
   });
 });
 
+app.get("/getton", (req, res) => {
+  let sql = "SELECT * from tonery;";
+  let query = db.query(sql, (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log(results);
+    res.send(results);
+  });
+});
+
+
+
 app.get("/getUser", (req, res) => {
-  let sql = "SELECT * from pracownicy";
+  let sql = "SELECT * from users";
   let query = db.query(sql, (err, results) => {
     if (err) {
       throw err;
@@ -228,6 +309,68 @@ app.get("/getPracownicyCsv", (req, res) => {
   });
 });
 
-app.listen("8081", () => {
+
+app.post('/licencja', (req, res) => {
+
+  const nazwaREQ = req.body.nazwa;
+  const kluczREQ = req.body.klucz;
+
+  console.log(nazwaREQ);
+  console.log(kluczREQ);
+
+  if(nazwaREQ != "" && kluczREQ != ""){
+
+      let licencja = {nazwa: nazwaREQ, klucz_produktu: kluczREQ};
+      let sql = 'INSERT INTO licencje SET ?';
+      let query = db.query(sql, licencja, (err, result) => {
+          if(err) throw err
+          console.log(result);
+          res.send('Licencja table inserted...');
+      });
+  }
+  else{
+      res.send('Catched null...');
+  }
+});
+
+
+app.post('/peryferia', (req, res) => {
+
+  const nazwaREQ = req.body.nazwa;
+  const typREQ = req.body.typ;
+
+  if(nazwaREQ != "" && typREQ != ""){
+
+      let peryferia = {typ_peryferii: typREQ, nazwa: nazwaREQ};
+      let sql = 'INSERT INTO peryferia SET ?';
+      let query = db.query(sql, peryferia, (err, result) => {
+          if(err) throw err
+          console.log(result);
+          res.send('Peryferia table inserted...');
+      });
+  }
+  else{
+      res.send('Catched null...');
+  }
+});
+
+app.post('/aparaty', (req, res) => {
+
+  const typREQ = req.body.typ;
+  const obiektywREQ = req.body.obiektyw;
+  const pamiecREQ = req.body.pamiec;
+  
+  let aparaty = {typ: typREQ, obiektyw: obiektywREQ, pamiec: pamiecREQ};
+  let sql = 'INSERT INTO aparaty SET ?';
+  let query = db.query(sql, aparaty, (err, result) => {
+      if(err) throw err
+      console.log(result);
+      res.send('Aparaty table inserted...');
+  });
+  
+}); 
+
+
+app.listen("3000", () => {
   console.log("running server server");
 });
