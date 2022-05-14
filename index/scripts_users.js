@@ -1,7 +1,7 @@
 //import axios from "axios";
 
 const laptopy = async () => {
-  return await axios.get("http://localhost:8081/getitem").then((response) => {
+  return await axios.get("http://localhost:3000/getitem").then((response) => {
     console.log(response);
     return response;
   });
@@ -228,17 +228,3 @@ const pracownicyCsv = async () => {
     });
 };
 
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}

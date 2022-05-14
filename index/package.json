@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "axios": "^0.26.1",
-    "axis": "^1.0.0"
+    "axis": "^1.0.0",
+    "http-server": "^14.1.0",
+    "http-server-node": "^1.0.2"
   }
 }

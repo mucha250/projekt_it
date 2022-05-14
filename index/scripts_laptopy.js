@@ -18,7 +18,7 @@ lp.addEventListener('submit', e => {
 
 
 const laptopy = () => {
-    alert("Hello! I am an alert box!!");
+
 
 
     const firmaValue = firma.value.trim();

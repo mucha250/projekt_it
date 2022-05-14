@@ -32,7 +32,7 @@ const login = () => {
         msg.style.color = "red";
         msg.innerHTML = "There is no such user in the database";
     }else {
-        location.href = "panel.html";
+        location.href = "home.html";
     }
 
 });
