@@ -4,17 +4,19 @@
 Aplikacja ma na celu ułatwienie pracy dla pracowników działu IT. Administratorzy aplikacji będą mogli zarządzać między innymi sprzętem, licencjami czy peryferiami w organizacji.
 
 <h2>Instalacja</h2>
--</br>
--</br>
--</br>
--</br>
+- Pobieramy Node.JS z oficjalnej strony 
+- Uruchamiamy Node.js instalujemy nodemona
+- W folderze z projektem gdzie znajudją sie pliki html instalujemy server http komendami: </br>
+npm -g rm live-server</br>
+npm -g i five-server</br>
+npm -g i five-server@latest</br>
 
 <h3>Uruchomienie</h2>
 - Uruchamiamy aplikację Xampp, następnie uruchamiamy Appache oraz MySQL. </br>
 - Uruchamiamy CMD jako administrator i przechodzimy do katalogu z naszym plikiem serwerowym.</br>
  W konsoli wpisujemy komendę npm start, następnie czekamy aż uruchomi się serwer, nie wyłączamy CMD. </br>
 - Uruchamiamy drugie okno CMD, następnie przechodzimy do folderu głównego z aplikacją i wpisujemy </br>
-http-server -c-1 aby uruchomić serwer http.
+five-server . -p 8000 aby uruchomić serwer http.
 
 -</br>
 
