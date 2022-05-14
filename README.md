@@ -40,9 +40,15 @@ Jest to oprogramowanie internetowe. Oznacza to, że nie ma pliku wykonywalnego (
 <h2>Panel logowania </h2>
 <img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/Sign%20In.png">
 <h2>Strona Główna</h2>
-Wkrótce
-<h2>Strona Główna - Użytkownik</h2>
-Wkrótce
+<img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/Strona_glowna.PNG">
+<h2>Dodawanie do Bazy</h2>
+<img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/Dodawanie1.PNG"> </br>
+<img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/Dodawanie2.PNG">
+<h2>Wyświetlanie z Bazy</h2>
+<img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/Wyswietlanie1.PNG"> </br>
+<img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/Wyswietlanie2.PNG">
+<h2>Wyświetlanie Użytkowników razem z opcją generowania CSV</h2>
+<img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/Wyswietl_baza_uzytkownikow.PNG">
 <h2>Schemat bazy danych</h2>
 <img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/model_bazy.png">
 
