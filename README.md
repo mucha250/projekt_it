@@ -18,12 +18,12 @@ npm -g i five-server@latest</br>
 - Uruchamiamy drugie okno CMD, następnie przechodzimy do folderu głównego z aplikacją i wpisujemy </br>
 five-server . -p 8000 aby uruchomić serwer http.
 
--</br>
+
 
 <h2>Technologie</h2>
 - Javascript - > Obsługa Backendu oraz Frontendu</br>
-- HTML - > opis...</br>
-- CSS - >  opis...</br>
+- HTML - > Szkielet aplikacji</br>
+- CSS - >  Stylizacja formularzy, podstron i przycisków </br>
 - MySQL - > Baza danych przechowująca informacje na temat użytkowników oraz sprzętu</br>
 
 <h2>Funkcjonalności</h2>
@@ -39,7 +39,7 @@ Jest to oprogramowanie internetowe. Oznacza to, że nie ma pliku wykonywalnego (
 
 <h2>Panel logowania </h2>
 <img src="https://raw.githubusercontent.com/mucha250/projekt_it/main/index/Sign%20In.png">
-<h2>Strona Główna - Administrator</h2>
+<h2>Strona Główna</h2>
 Wkrótce
 <h2>Strona Główna - Użytkownik</h2>
 Wkrótce
