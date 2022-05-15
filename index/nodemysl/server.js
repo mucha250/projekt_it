@@ -333,6 +333,76 @@ app.post('/licencja', (req, res) => {
   }
 });
 
+app.post('/usun', (req, res) => {
+
+  const nazwaREQ = req.body.nazwa;
+  
+
+  console.log(nazwaREQ);
+ 
+
+  if(nazwaREQ != ""){
+
+      let licencja = {nazwa: nazwaREQ};
+      let sql = 'delete from `licencje` where ?';
+      let query = db.query(sql, licencja, (err, result) => {
+          if(err) throw err
+          console.log(result);
+          res.send('Licencja table droped...');
+      });
+  }
+  else{
+      res.send('Catched null...');
+  }
+});
+
+app.post('/usunaparat', (req, res) => {
+
+  const typREQ = req.body.typ;
+  
+
+  console.log(typREQ);
+ 
+
+  if(typREQ != ""){
+
+      let licencja = {typ: typREQ};
+      let sql = 'delete from `aparaty` where ?';
+      let query = db.query(sql, licencja, (err, result) => {
+          if(err) throw err
+          console.log(result);
+          res.send('Licencja table droped...');
+      });
+  }
+  else{
+      res.send('Catched null...');
+  }
+});
+
+app.post('/usunlaptop', (req, res) => {
+
+  const nazwa_w_domenieREQ = req.body.nazwa_w_domenie;
+  
+
+  console.log(nazwa_w_domenieREQ);
+ 
+
+  if(nazwa_w_domenieREQ != ""){
+
+      let licencja = {nazwa_w_domenie: nazwa_w_domenieREQ};
+      let sql = 'delete from `laptopy` where ?';
+      let query = db.query(sql, licencja, (err, result) => {
+          if(err) throw err
+          console.log(result);
+          res.send('Licencja table droped...');
+      });
+  }
+  else{
+      res.send('Catched null...');
+  }
+});
+
+
 
 app.post('/peryferia', (req, res) => {
 
